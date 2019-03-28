@@ -1,0 +1,15 @@
+// Setting
+$breakpoints : (
+    s : 0,
+    m : 640px,
+    l : 1024px,
+    lg : 1024px,
+    xl : 1440px
+);
+$sizes: map-keys($breakpoints);
+
+$max-width : 1200px;
+$fractions : 3 6;
+$gap : 2rem;
+$container : sn-container;
+$item : sn-item;

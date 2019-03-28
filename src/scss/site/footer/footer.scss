@@ -1,0 +1,35 @@
+.Site-footer{
+    background: var(--dark-color-alt);
+}
+
+.Footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-gap: var(--gap);
+    padding-top: 32px;
+    padding-bottom: 64px;
+    color: var(--light-color);
+}
+.FooterItem{
+    &-title{
+        color: white;
+        position: relative;
+        padding-left: 16px;
+        margin: 0;
+        text-transform: capitalize;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background: var(--first-color);
+        }
+    }
+    ul{
+        padding: 0 0 0 32px;
+        a{
+            color: var(--light-color);
+        }
+    }
+}

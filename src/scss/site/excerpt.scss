@@ -1,0 +1,26 @@
+.Excerpt{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-gap: var(--gap);
+    grid-template-areas: 'img img img content content content content content content content';
+    margin-bottom: 16px;
+    &-title{
+        margin: 0 0 8px 0;
+    }
+    &-created{
+        color: var(--text-color-alt);
+    }
+    &-img{
+        grid-area: img;
+    }
+    &-content{
+        grid-area: content;
+    }
+    &-footer{
+        display: flex;
+        align-items: center;
+        .avatar{
+            margin-right: 8px;
+        }
+    }
+}

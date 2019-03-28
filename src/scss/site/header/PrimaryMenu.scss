@@ -1,0 +1,76 @@
+
+.PrimaryMenu{
+    @include from(l){
+        & > li > a {
+            line-height: 3.5rem;
+            text-transform: uppercase;
+        }
+    }
+    @include to(l){
+        padding: 1px 0;
+        a,
+        .Toggle{
+            line-height: 40px;
+            height: 40px;
+        }
+        a{
+            margin: 4px 0;
+            padding-left: 24px;
+            color: var(--light-color);
+            .Toggle{
+                padding-right: 12px !important;
+            }
+            &:hover{
+                color: white;
+                background:  rgba(white,.05)
+            }
+        }
+        & > li > a {
+            &.is-active{
+                background: var(--first-color);
+                color: white;
+            }
+        }
+        .sub-menu{
+            background: var(--dark-color-alt);
+            a{ padding-left: 48px }
+            ul a { padding-left: 58px }
+        }
+        .sub-menu a {
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}
+
+.PrimaryMenu{
+    @include to(l){
+        &-nav{
+            position: fixed;
+            z-index: 999;
+            overflow: auto;
+            height: 100vh;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            background: rgba(0,0,0,.15);
+        }
+        height: 100vh;
+        width: 80%;
+        background: var(--dark-color);
+    }
+}
+
+.PrimaryMenu-is-show{
+    .PrimaryMenu-nav{
+        @include to(l){
+            left: -0;
+        }
+    }
+}
+
+#PrimaryMenu-toggle{
+    font-size: 1.3rem;
+    line-height: 3.5rem;
+}

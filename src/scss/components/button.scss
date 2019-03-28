@@ -1,0 +1,82 @@
+
+.Button{
+    --buttonBorderColor: var(--first-color);
+    --buttonBgColor: transparent;
+    --buttonTextColor: var(--first-color);
+
+    display: inline-block;
+    font-size: 0.85em;
+    line-height: 1.8em;
+    padding: 4px 1rem;
+    margin: 0 1rem 1rem 0;
+    border-radius: 5px;
+    text-decoration: none;
+    
+    background: var(--buttonBgColor);
+    border: 1px solid var(--buttonBorderColor);
+    color: var(--buttonTextColor);
+    
+    &.small{
+        padding: 0 1rem;
+    }
+    &.large{
+        padding: 8px 1rem;
+    }
+
+    &.blue{
+        --buttonBgColor : var(--first-color);
+        --buttonTextColor: white;
+        &:hover{
+            color: white;
+        }
+    }
+    &.white{
+        --buttonBgColor : white;
+        --buttonBorderColor: white;
+        --buttonTextColor: var(--first-color);
+    }
+    &.apple{
+        --buttonBgColor : #FAFAFA;
+        --buttonBorderColor: #FAFAFA;
+        --buttonTextColor: #333333;
+        &:hover{
+            color: var(--buttonTextColor);
+        }
+    }
+    &.orange{
+        --buttonBgColor : #E95420;
+        --buttonBorderColor: #E95420;
+        --buttonTextColor: white;
+        &:hover{
+            color: var(--buttonTextColor);
+        }
+    }
+    &.green{
+        --buttonBgColor : #1DA362;
+        --buttonBorderColor: #1DA362;
+        --buttonTextColor: white;
+        &:hover{
+            color: var(--buttonTextColor);
+        }
+    }
+    &.black{
+        --buttonBgColor : black;
+        --buttonBorderColor: black;
+        --buttonTextColor: white;
+    }
+    &.assent{
+        --buttonBgColor : var(--accent-color);
+        --buttonBorderColor: var(--accent-color);
+        --buttonTextColor: #1B1200;
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

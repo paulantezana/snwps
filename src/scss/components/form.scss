@@ -1,0 +1,26 @@
+input, textarea, select{
+    border: 1px solid var(--border-color);
+    background: transparent;
+    display: inline-block;
+    padding: 6px 11px;
+    // height: 32px;
+    width: 100%;
+    font-size: 14px;
+    color: var(--text-color);
+    border-radius: 4px;
+    margin-bottom: 16px;
+
+    &:hover{
+        border: 1px solid var(--light-color);
+    }
+    &:focus{
+        border: 1px solid var(--first-color);
+        box-shadow: none;
+        outline: none;
+        // box-shadow: 0 0 0 2px var(--first-color-lighten);
+    }
+    &[type="submit"]{
+        background: var(--first-color);
+        color: var(--first-color-inverse);
+    }
+}

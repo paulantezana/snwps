@@ -1,0 +1,13 @@
+table{
+    width: 100%;
+    th,
+    td{
+        border: 1px solid var(--border-color);
+        padding: 8px 8px;
+    }
+    tr{
+        &:hover{
+            background: rgba(#000,.01);
+        }
+    }
+}

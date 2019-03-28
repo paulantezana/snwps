@@ -1,0 +1,52 @@
+.Header{
+    // @extend %container;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+}
+
+.Site{
+    position: relative;
+    &-content{
+        display: grid;
+        grid-gap: var(--gap);
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:    'main'
+                                'features'
+                                'sidebar';
+        &--sidebarRight{
+            @include from(m){
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas:    'main main main sidebar'
+                                        'features features features sidebar';
+            }
+        }
+        &--sidebarLeft{
+            @include from(m){
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas:    'sidebar main main main'
+                                        'sidebar features features features';
+            }
+        }
+    }
+}
+
+.Container{
+    @extend %container;
+}
+
+.Full{
+    max-width: 100%;
+    width: 100%;
+}
+
+.Main{ grid-area: main; }
+.Sidebar{ grid-area: sidebar; }
+
+.Pagination,
+.Comments{
+    grid-area: features;
+}

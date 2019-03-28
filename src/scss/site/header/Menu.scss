@@ -1,0 +1,42 @@
+.Menu{
+    a{
+        font-family: var(--heading-font);
+        color: var(--text-color);
+        &:hover,
+        &.is-active{
+            color: var(--first-color-alt);
+        }
+    }
+
+    @include from(l){
+        & > li > a {
+            margin-left: 1.5rem;
+        }
+        & > li > ul {
+            right: 0;
+        }
+        .sub-menu a{
+            line-height: 34px;
+            padding: 0 16px;
+        }
+    }
+
+    .sub-menu{
+        @include from(l){
+            min-width: 220px;
+            background: var(--body-bg-alt);
+            box-shadow: 0 0 0 1px var(--border-color) inset;
+            border-radius: 4px;
+        }
+        .menu-item{
+            @include from(l){
+                border-bottom: 1px solid var(--border-color);
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+@import "PrimaryMenu";
