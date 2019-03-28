@@ -1,80 +1,74 @@
-
-.PrimaryMenu{
-    @include from(l){
-        & > li > a {
-            line-height: 3.5rem;
-            text-transform: uppercase;
+// estilos generales
+.PrimaryMenu {
+    a {
+        line-height: 35px;
+        height: 35px;
+        display: block;
+        padding: 0 12px;
+        &.is-toggle {
+            display: flex;
+            justify-content: space-between;
         }
-    }
-    @include to(l){
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-
-        // a,
-        // .Toggle{
-        //     line-height: 40px;
-        //     height: 40px;
-        // }
-        // a{
-        //     margin: 4px 0;
-        //     padding-left: 24px;
-        //     color: var(--light-color);
-        //     .Toggle{
-        //         padding-right: 12px !important;
-        //     }
-        //     &:hover{
-        //         color: white;
-        //         background:  rgba(white,.05)
-        //     }
-        // }
-        // & > li > a {
-        //     &.is-active{
-        //         background: var(--first-color);
-        //         color: white;
-        //     }
-        // }
-        // .sub-menu{
-        //     background: var(--dark-color-alt);
-        //     a{ padding-left: 48px }
-        //     ul a { padding-left: 58px }
-        // }
-        // .sub-menu a {
-        //     &:hover{
-        //         color: white;
-        //     }
-        // }
     }
 }
 
+// estilos en el menu mobile
 .PrimaryMenu{
     @include to(l){
         &-container{
             position: fixed;
-            height: 100vh;
             width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            top: 0;
-            background: var(--dark-color);
+            height: 100vh;
+            top: -100%;
+            left: 0;
+            background: rgba($menu-mobile-bg, .99);
+            transition: all $transition-duration;
         }
-        // height: 100vh;
-        // width: 80%;
-        // background: var(--dark-color);
+        a{
+            color: $menu-mobile-color;
+        }
+        .sub-menu{
+            margin-left: 32px;
+        }
     }
 }
 
+// cuando se a
 .PrimaryMenu-is-show{
-    .PrimaryMenu-nav{
-        // @include to(l){
-        //     left: -0;
-        // }
+    .PrimaryMenu-container{
+        top: 0;
     }
+}
+
+#PrimaryMenu-close {
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    color: $menu-mobile-color;
+    margin-bottom: 16px;
+    cursor: pointer;
+    @include from(l) {
+      display: none;
+    }
+}
+
+// estilos en el escritorio
+.PrimaryMenu {
+  @include from(l) {
+    & > li > a {
+      line-height: 60px;
+      height: 60px;
+    }
+    .sub-menu{
+        background: $first-color-inverse;
+        box-shadow: 0 0 0 1px  $border-color inset;
+    }
+  }
 }
 
 #PrimaryMenu-toggle{
     font-size: 1.3rem;
-    line-height: 3.5rem;
+    line-height: 60px;
+    height: 60px;
 }

@@ -1,12 +1,12 @@
 .Site-header{
-    background: var(--body-bg-alt);
+    background: $body-bg-alt;
     @media print {  display: none;  }
 }
 
 .Header{
     &-nav{
-        border-bottom: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid $border-color;
+        border-top: 1px solid $border-color;
         display: flex;
         justify-content: center;
     }
@@ -25,7 +25,7 @@
 
 .Branding{
     text-align: center;
-    font-family: var(--heading-font);
+    font-family: $heading-font;
     // &-logo{
     //     margin-bottom: 8px;
     // }

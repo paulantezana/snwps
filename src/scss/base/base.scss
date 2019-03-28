@@ -5,34 +5,34 @@
 }
 
 ::selection{
-    background: var(--first-color);
-    color: var(--first-color-inverse);
+    background: $first-color;
+    color: $first-color-inverse;
 }
 
 // body app styles
 body{
-    font-family: var(--body-font);
-    line-height: var(--body-line-height);
-    font-size: var(--normal-font-size);
-    color: var(--text-color);
+    font-family: $body-font;
+    line-height: $body-line-height;
+    font-size: $normal-font-size;
+    color: $text-color;
 
-    background: var(--body-bg);
+    background: $body-bg;
     margin: 0;
 }
 
 // Heading titles
 h1,h2,h3,h4,h5,h6{
-    line-height: var(--heading-line-height);
-    font-family: var(--heading-font);
+    line-height: $heading-line-height;
+    font-family: $heading-font;
 }
 h1{
-    font-size: var(--h2-font-size);
+    font-size: $h2-font-size;
 }
 h2{
-    font-size: var(--h2-font-size);
+    font-size: $h2-font-size;
 }
 h3{
-    font-size: var(--h3-font-size);
+    font-size: $h3-font-size;
 }
 
 // font family styles
@@ -41,7 +41,7 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: var(--body-font), sans-serif;
+    font-family: $body-font, sans-serif;
 }
 
 // multimedia styles
@@ -53,10 +53,10 @@ video,iframe,img{
 
 // link color
 a{
-    color: var(--first-color);
+    color: $first-color;
     text-decoration: none;
     &:hover{
-        color: var(--first-color-alt);
+        color: $first-color-alt;
     }
 }
 
@@ -85,7 +85,7 @@ table {
         vertical-align: top;
     }
     th {
-        color: var(--text-color);
+        color: $text-color;
     }
 }
 [class*="icon-"]::before{

@@ -1,3 +1,15 @@
+// Configuraciones
+$prototype : true !default;
+$dev : false !default;
+$max-width : 1200px !default;
+$l-unit : .5rem !default;
+$gap : $l-unit * 4 !default;  // 2rem
+$fractions : 3 6 !default;
+$legacy : false !default;
+$container : ed-container !default;
+$item : ed-item !default;
+$max-grid-columns : 12 !default;
+
 // Setting
 $breakpoints : (
     s : 0,
@@ -8,8 +20,50 @@ $breakpoints : (
 );
 $sizes: map-keys($breakpoints);
 
-$max-width : 1200px;
-$fractions : 3 6;
-$gap : 2rem;
-$container : sn-container;
-$item : sn-item;
+
+//
+$transition-duration: .4s;
+$heading-font: Roboto, sans-serif;
+$body-font: Roboto, sans-serif;
+
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+
+$heading-line-height: 1.3;
+$body-line-height: 1.6;
+
+$normal-font-size: 0.9rem;
+
+
+$first-color: #007EE6;
+$first-color-alt: #0070CC;
+$first-color-inverse: #FFFFFF;
+
+$second-color: #06C3FB;
+$second-color-alt: #0092C8;
+$second-color-inverse: #0C242F;
+
+$accent-color: #06C3FB;
+$accent-color-alt: #0092C8;
+$accent-color-inverse: #ffe2e2;
+
+
+$border-color: #EBECEE;
+$text-color: #54575A;
+$text-color-alt: #97999B;
+$body-bg: #FAFBFF;
+$body-bg-alt: #FFF;
+
+// Menu
+$menu-width: 220px;
+$menu-hover-bg: #F9F9F9;
+$menu-hover-color: $text-color;
+$menu-mobile-bg: #001529;
+$menu-mobile-color: #A6ADB4;
+
+$dark-color: #282D31;
+$light-color: #A6ADB4;
+$dark-color-alt: #141618;
+
+
