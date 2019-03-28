@@ -38,17 +38,19 @@
 						</div>
                     </div>
                     <div class="Header-nav">
-                        <div id="PrimaryMenu-toggle" class="icon-menu Menu-toggle"></div>
-						<?php
-							wp_nav_menu([
-								'theme_location'  => 'main_menu',
-								'container'       => 'nav',
-								'container_class' => 'PrimaryMenu-nav',
-								'container_id' => 'PrimaryMenu-nav',
-								'menu_class'      => 'Menu PrimaryMenu',
-								'menu_id'        => 'PrimaryMenu',
-							]);
-                        ?>
+							<div id="PrimaryMenu-toggle" class="icon-menu Menu-toggle"></div>
+						<div class="PrimaryMenu-container">
+							<?php
+								wp_nav_menu([
+									'theme_location'  => 'main_menu',
+									'container'       => 'nav',
+									'container_class' => 'PrimaryMenu-nav',
+									'container_id' => 'PrimaryMenu-nav',
+									'menu_class'      => 'Menu PrimaryMenu',
+									'menu_id'        => 'PrimaryMenu',
+								]);
+							?>
+						</div>
                     </div>
                 </header>
             </div>

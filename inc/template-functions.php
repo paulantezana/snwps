@@ -37,7 +37,6 @@ if ( !function_exists( 'snwps_menus' ) ):
 	function snwps_menus () {
 		register_nav_menus(array(
 			'main_menu' => __('Menú Principal', 'snwps'),
-			'main_top' => __('Menú Superior', 'snwps'),
 			'footer_menu1' => __('Menu inferior 1', 'snwps'),
 			'footer_menu2' => __('Menu inferior 2', 'snwps'),
 		));

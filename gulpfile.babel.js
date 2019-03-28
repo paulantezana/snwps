@@ -33,7 +33,7 @@ const reloadFiles = [
 	'./**/*.php'
 ];
 const proxyOptions = {
-	proxy: 'localhost:81',
+	proxy: 'localhost',
 	notify: false
 };
 const imageminOptions = {
