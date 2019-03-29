@@ -4,9 +4,9 @@
 
 @import "layout/site";
 
-// @import "components/form";
+@import "components/form";
 // @import "components/avatar";
-// @import "components/exception";
+@import "components/exception";
 @import "components/menu";
 // @import "components/table";
 // @import "components/button";
@@ -17,9 +17,10 @@
 // @import "content/comment";
 
 @import "site/header/index";
+@import "site/search";
 // @import "site/footer/index";
 // @import "site/excerpt";
-// @import "site/siteHeader";
+@import "site/siteHeader";
 
 
 

@@ -9,7 +9,7 @@
     position: relative;
     &-content{
         display: grid;
-        grid-gap: var(--gap);
+        grid-gap: $gap;
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, auto);
         grid-template-areas:    'main'

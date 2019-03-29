@@ -1,26 +1,135 @@
-input, textarea, select{
-    border: 1px solid var(--border-color);
-    background: transparent;
-    display: inline-block;
-    padding: 6px 11px;
-    // height: 32px;
-    width: 100%;
-    font-size: 14px;
-    color: var(--text-color);
-    border-radius: 4px;
-    margin-bottom: 16px;
+// input, textarea, select{
+//     border: 1px solid var(--border-color);
+//     background: transparent;
+//     display: inline-block;
+//     padding: 6px 11px;
+//     // height: 32px;
+//     width: 100%;
+//     font-size: 14px;
+//     color: var(--text-color);
+//     border-radius: 4px;
+//     margin-bottom: 16px;
 
-    &:hover{
-        border: 1px solid var(--light-color);
+//     &:hover{
+//         border: 1px solid var(--light-color);
+//     }
+//     &:focus{
+//         border: 1px solid var(--first-color);
+//         box-shadow: none;
+//         outline: none;
+//         // box-shadow: 0 0 0 2px var(--first-color-lighten);
+//     }
+//     &[type="submit"]{
+//         background: var(--first-color);
+//         color: var(--first-color-inverse);
+//     }
+// }
+
+.Form-item{
+    margin-bottom: 16px;
+    label{
+        display: block;
+        margin: 0;
+        padding: 0 0 8px;
+        line-height: 1.5;
+        // text-align: left;
+        &.required::before{
+            display: inline-block;
+            margin-right: 4px;
+            color: #f5222d;
+            font-size: 14px;
+            // font-family: SimSun, sans-serif;
+            line-height: 1;
+            content: '*';
+        }
     }
-    &:focus{
-        border: 1px solid var(--first-color);
+    textarea,
+    input{
+        border: 1px solid $border-color;
+        background: white;
         box-shadow: none;
-        outline: none;
-        // box-shadow: 0 0 0 2px var(--first-color-lighten);
-    }
-    &[type="submit"]{
-        background: var(--first-color);
-        color: var(--first-color-inverse);
+        padding: 6px 11px;
+        font-size: 14px;
+        color: #595959;
+        border-radius: 4px;
+        line-height: 1em;
+        width: 100%;
+        &:hover{
+            border-color: #40a9ff;
+        }
+        &:active,
+        &:focus{
+            border-color: #40a9ff;
+            outline: 0;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+            border-right-width: 1px !important;
+        }
     }
 }
+
+// .Form{
+//     &.horizontal{
+//         max-width: 600px;
+//         @include from(m){
+//             .Form-item{
+//                 display: flex;
+//                 align-items: center;
+//                 .Form-label{
+//                     width: 40%;
+//                     text-align: right;
+//                     padding: 0;
+//                     &::after{
+//                         content: ':';
+//                         position: relative;
+//                         top: -0.5px;
+//                         margin: 0 8px 0 2px;
+//                     }
+//                 }
+//                 .Form-input{
+//                     width: 50%;
+//                 }
+//             }
+//         }
+//     }
+//     &-item{
+//         margin-bottom: 16px;
+//     }
+//     &-label{
+//         display: block;
+//         margin: 0;
+//         padding: 0 0 8px;
+//         line-height: 1.5;
+//         // text-align: left;
+//         &.required::before{
+//             display: inline-block;
+//             margin-right: 4px;
+//             color: #f5222d;
+//             font-size: 14px;
+//             // font-family: SimSun, sans-serif;
+//             line-height: 1;
+//             content: '*';
+//         }
+//     }
+//     &-textArea,
+//     &-input{
+//         border: 1px solid #D9D9D9;
+//         background: white;
+//         box-shadow: none;
+//         padding: 6px 11px;
+//         font-size: 14px;
+//         color: #595959;
+//         border-radius: 4px;
+//         line-height: 1em;
+//         width: 100%;
+//         &:hover{
+//             border-color: #40a9ff;
+//         }
+//         &:active,
+//         &:focus{
+//             border-color: #40a9ff;
+//             outline: 0;
+//             box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+//             border-right-width: 1px !important;
+//         }
+//     }
+// }

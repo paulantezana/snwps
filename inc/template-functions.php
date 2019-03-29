@@ -54,13 +54,11 @@ if ( !function_exists( 'snwps_scripts' ) ):
 		global $icon_fonts;
 		wp_register_style( 'google_fonts', $google_fonts, [], '1.0.0', 'all' );
 		wp_register_style( 'icon_fonts', $icon_fonts, [], '1.0.0', 'all' );
-		wp_register_style( 'vars_style', get_template_directory_uri() . '/assets/css/variables.css', [], '1.0.0', 'all' );
-		wp_register_style( 'style', get_template_directory_uri() . '/assets/css/app.css', ['google_fonts','vars_style','icon_fonts'], '1.0.0', 'all' );
+		wp_register_style( 'style', get_template_directory_uri() . '/assets/css/app.css', ['google_fonts','icon_fonts'], '1.0.0', 'all' );
 		wp_register_script( 'scripts', get_template_directory_uri() . '/assets/js/app.js', [], '1.0.0', true );
 
 		wp_enqueue_style( 'icon_fonts' );
 		wp_enqueue_style( 'google_fonts' );
-		wp_enqueue_style( 'vars_style' );
 		wp_enqueue_style( 'style' );
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'scripts' );

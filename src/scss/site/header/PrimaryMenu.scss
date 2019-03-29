@@ -1,74 +1,74 @@
 // estilos generales
 .PrimaryMenu {
-    a {
-        line-height: 35px;
-        height: 35px;
-        display: block;
-        padding: 0 12px;
-        &.is-toggle {
-            display: flex;
-            justify-content: space-between;
-        }
+  a {
+    line-height: 35px;
+    height: 35px;
+    display: block;
+    padding: 0 12px;
+    &.is-toggle {
+      display: flex;
+      justify-content: space-between;
     }
+  }
 }
 
 // estilos en el menu mobile
-.PrimaryMenu{
-    @include to(l){
-        &-container{
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: -100%;
-            left: 0;
-            background: rgba($menu-mobile-bg, .99);
-            transition: all $transition-duration;
-        }
-        a{
-            color: $menu-mobile-color;
-        }
-        .sub-menu{
-            margin-left: 32px;
-        }
+.PrimaryMenu {
+  @include to(l) {
+    &-container {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: -100%;
+      left: 0;
+      background: rgba($menu-mobile-bg, 0.99);
+      transition: all $transition-duration;
     }
+    a {
+      color: $menu-mobile-color;
+    }
+    .sub-menu {
+      margin-left: 32px;
+    }
+  }
 }
 
 // cuando se a
-.PrimaryMenu-is-show{
-    .PrimaryMenu-container{
-        top: 0;
-    }
+.PrimaryMenu-is-show {
+  .PrimaryMenu-container {
+    top: 0;
+  }
 }
 
 #PrimaryMenu-close {
-    padding-top: 64px;
-    display: flex;
-    justify-content: center;
-    font-size: 32px;
-    color: $menu-mobile-color;
-    margin-bottom: 16px;
-    cursor: pointer;
-    @include from(l) {
-      display: none;
-    }
+  padding-top: 64px;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  color: $menu-mobile-color;
+  margin-bottom: 16px;
+  cursor: pointer;
+  @include from(l) {
+    display: none;
+  }
 }
 
 // estilos en el escritorio
 .PrimaryMenu {
   @include from(l) {
     & > li > a {
-      line-height: 60px;
-      height: 60px;
+      line-height: 50px;
+      height: 50px;
     }
-    .sub-menu{
-        background: $first-color-inverse;
-        box-shadow: 0 0 0 1px  $border-color inset;
+    .sub-menu {
+      background: $first-color-inverse;
+      box-shadow: 0 0 0 1px $border-color inset;
     }
   }
 }
 
-#PrimaryMenu-toggle{
-    font-size: 1.3rem;
-    line-height: 60px;
-    height: 60px;
+#PrimaryMenu-toggle {
+  font-size: 1.3rem;
+  line-height: 50px;
+  height: 50px;
 }

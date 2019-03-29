@@ -4,12 +4,10 @@
         function sninstitute_admin_scripts () {
             global $google_fonts;
             wp_register_style( 'google_fonts', $google_fonts, [], '1.0.0', 'all' );
-            wp_register_style( 'vars_style', get_template_directory_uri() . '/assets/css/variables.css', [], '1.0.0', 'all' );
-            wp_register_style( 'admin_style', get_template_directory_uri() . '/assets/css/admin.css', ['vars_style','google_fonts'], '1.0.0', 'all' );
+            wp_register_style( 'admin_style', get_template_directory_uri() . '/assets/css/admin.css', ['google_fonts'], '1.0.0', 'all' );
             wp_register_script( 'admin_scripts', get_template_directory_uri() . '/assets/js/admin.js', [], '1.0.0', true );
             
             wp_enqueue_style( 'google_fonts' );
-            wp_enqueue_style( 'vars_style' );
             wp_enqueue_style( 'admin_style' );
             wp_enqueue_script( 'admin_scripts' );
         }
