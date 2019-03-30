@@ -10,8 +10,8 @@
 
         // Configuraciones personalizadas del tema
         // xxxxxxxxxxxxxxxxxxxxxxxx PANEL PRIMARY xxxxxxxxxxxxxxxxxxxxxxxx
-        $wp_customize -> add_panel('intitute_panel', [
-                'title'         => __('Instituto','snwps'),
+        $wp_customize -> add_panel('company_panel', [
+                'title'         => __('Empresa','snwps'),
                 'priority'      => 1,
                 'capability'    => 'edit_theme_options'
         ]);
@@ -23,19 +23,19 @@
             'title'         => __('General','snwps'),
             'description'   => 'Opciones Generales',
             'priority'      => 1,
-            'panel'         => 'intitute_panel'
+            'panel'         => 'company_panel'
         ]);
         $wp_customize -> add_section('snwps_contact',[
             'title'         => __('Contacto','snwps'),
             'description'   => 'Contacto',
             'priority'      => 2,
-            'panel'         => 'intitute_panel'
+            'panel'         => 'company_panel'
         ]);
         $wp_customize -> add_section('snwps_theme',[
             'title'         => __('Tema','snwps'),
             'description'   => 'Colores del sitio',
             'priority'      => 3,
-            'panel'         => 'intitute_panel'
+            'panel'         => 'company_panel'
         ]);
 
 

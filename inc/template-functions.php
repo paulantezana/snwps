@@ -22,7 +22,7 @@ if ( !function_exists( 'snwps_register_sidebars' ) ):
 			'description' => __('Este es el sidebar de pie de página', 'snwps'),
 			'before_widget' => '<article id="%1$s" class="Widget  %2$s">',
 			'after_widget' => '</article>',
-			'before_title' => '<h3 class="FooterItem-title">',
+			'before_title' => '<h3 class="Footer-title">',
 			'after_title' => '</h3>',
 		));
 	}
@@ -37,8 +37,7 @@ if ( !function_exists( 'snwps_menus' ) ):
 	function snwps_menus () {
 		register_nav_menus(array(
 			'main_menu' => __('Menú Principal', 'snwps'),
-			'footer_menu1' => __('Menu inferior 1', 'snwps'),
-			'footer_menu2' => __('Menu inferior 2', 'snwps'),
+			'footer_menu' => __('Menu inferior', 'snwps'),
 		));
 	}
 endif;
