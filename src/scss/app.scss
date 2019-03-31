@@ -4,12 +4,13 @@
 
 @import "layout/site";
 
+@import "components/grid";
 @import "components/form";
 // @import "components/avatar";
 @import "components/exception";
 @import "components/menu";
-// @import "components/table";
-// @import "components/button";
+@import "components/table";
+@import "components/button";
 
 @include sn-menu();
 
@@ -19,9 +20,5 @@
 @import "site/header/index";
 @import "site/search";
 @import "site/footer/index";
-// @import "site/excerpt";
 @import "site/siteHeader";
-
-
-
-// @include sn-menu-ui();
+@import "site/searchForm";

@@ -1,20 +1,14 @@
-.Header{
-    // @extend %container;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-}
-
 .Site{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     &-content{
         display: grid;
         grid-gap: $gap;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas:    'main'
-                                'features'
-                                'sidebar';
+        grid-template-areas:    'main';
+
         &--sidebarRight{
             @include from(m){
                 grid-template-columns: repeat(4,1fr);
@@ -31,6 +25,9 @@
                                         'sidebar features features features';
             }
         }
+    }
+    &-footer{
+        margin-top: auto;
     }
 }
 

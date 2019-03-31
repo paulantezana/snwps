@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div class="Site-content">
+<div class="Site-content Site-content--sidebarRight">
     <main class="Main">
 		<?php
 		if ( have_posts() ) :

@@ -24,6 +24,27 @@
 //         color: var(--first-color-inverse);
 //     }
 // }
+@mixin FormInput {
+    border: 1px solid $border-color;
+        background: white;
+        box-shadow: none;
+        padding: 6px 11px;
+        font-size: 14px;
+        color: $text-color;
+        border-radius: 4px;
+        line-height: 1em;
+        width: 100%;
+        &:hover{
+            border-color: $first-color;
+        }
+        &:active,
+        &:focus{
+            border-color: $first-color;
+            outline: 0;
+            box-shadow: 0 0 0 2px rgba($first-color, 0.2);
+            border-right-width: 1px !important;
+        }
+}
 
 .Form-item{
     margin-bottom: 16px;
@@ -45,26 +66,11 @@
     }
     textarea,
     input{
-        border: 1px solid $border-color;
-        background: white;
-        box-shadow: none;
-        padding: 6px 11px;
-        font-size: 14px;
-        color: #595959;
-        border-radius: 4px;
-        line-height: 1em;
-        width: 100%;
-        &:hover{
-            border-color: #40a9ff;
-        }
-        &:active,
-        &:focus{
-            border-color: #40a9ff;
-            outline: 0;
-            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-            border-right-width: 1px !important;
-        }
+        @include FormInput;
     }
+    // .submit{
+
+    // }
 }
 
 // .Form{

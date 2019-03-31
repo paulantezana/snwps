@@ -19,6 +19,7 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
+      z-index: 999;
       top: -100%;
       left: 0;
       background: rgba($menu-mobile-bg, 0.99);
@@ -56,6 +57,12 @@
 // estilos en el escritorio
 .PrimaryMenu {
   @include from(l) {
+      a{
+          color: $text-color;
+          &:hover{
+              color: $color-6;
+          }
+      }
     & > li > a {
       line-height: 50px;
       height: 50px;
